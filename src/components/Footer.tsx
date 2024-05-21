@@ -1,15 +1,22 @@
-import Nav from './Nav'
+import Nav from './commons/Nav'
+import Image from './commons/Image'
+import logoUrl from '../assets/logo_color.png'
+
+const footerList = [
+  {
+    id: 'Home',
+    link: '',
+    desc: 'Home',
+  },
+]
 
 function Footer() {
   return (
     <footer>
       <p>contact info</p>
       <a>Social media links</a>
-      <Nav />
-      <figure>
-        <img />
-        <figcaption></figcaption>
-      </figure>
+      <Image src={logoUrl} alt='Little Lemon logo' />
+      <Nav list={footerList} />
     </footer>
   )
 }

@@ -1,3 +1,5 @@
+import Image from './commons/Image'
+
 function About() {
   return (
     <section>
@@ -5,14 +7,8 @@ function About() {
       <h2>Chicago</h2>
       <p>Desc</p>
       <aside>
-        <figure>
-          <img />
-          <figcaption></figcaption>
-        </figure>
-        <figure>
-          <img />
-          <figcaption></figcaption>
-        </figure>
+        <Image />
+        <Image />
       </aside>
     </section>
   )

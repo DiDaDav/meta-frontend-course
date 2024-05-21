@@ -1,13 +1,12 @@
+import Image from './commons/Image'
+
 function Testimonials() {
   return (
     <section>
       <h1>Testimonials</h1>
       <p>rating</p>
       <p>user profile</p>
-      <figure>
-        <img />
-        <figcaption></figcaption>
-      </figure>
+      <Image />
       <p>review</p>
     </section>
   )
