@@ -1,6 +1,6 @@
 import Nav from './commons/Nav'
 import Image from './commons/Image'
-import logoUrl from '../assets/logo_color.png'
+import logoUrl from '../assets/logo_title.png'
 
 const menuList = [
   {

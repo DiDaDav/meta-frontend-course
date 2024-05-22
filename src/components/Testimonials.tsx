@@ -2,7 +2,7 @@ import Image from './commons/Image'
 
 function Testimonials() {
   return (
-    <section>
+    <section id='testimonials'>
       <h1>Testimonials</h1>
       <p>rating</p>
       <p>user profile</p>

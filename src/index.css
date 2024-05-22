@@ -1,0 +1,35 @@
+/* theme: #49SE57 or #F4CE14 */
+/* title: markazi text, medium, 64pt*/
+/* sub title: markazi text, regular, 40pt */
+/* others: karla */
+/* section title: extra bold uppercase 20pt */
+/* lead text: medium 18pt */
+/* ths weeks specials section categories: 16pt extra bold */
+/* card title: 18 pt bold */
+/* paragraphe text regular 16pt 1.5 line height */
+/* highlight text medium 16pt */
+/* buttons rounded-corners 16 */
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(1px, 1fr));
+    background-color: antiquewhite;
+}
+
+header {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row: 1;
+}
+
+main {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row: 2;
+}
+
+footer {
+    grid-column-start: 3;
+    grid-column-end: 11;
+    grid-row: 3;
+}

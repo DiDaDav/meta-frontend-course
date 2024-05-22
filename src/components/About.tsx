@@ -2,7 +2,7 @@ import Image from './commons/Image'
 
 function About() {
   return (
-    <section>
+    <section id='about'>
       <h1>Little Lemon</h1>
       <h2>Chicago</h2>
       <p>Desc</p>

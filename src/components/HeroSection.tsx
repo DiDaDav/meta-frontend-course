@@ -2,7 +2,7 @@ import Image from './commons/Image'
 
 function HeroSection() {
   return (
-    <section>
+    <section id='heroSection'>
       <h1>Little Lemon</h1>
       <h2>Chicago</h2>
       <p>Laurem ipsum</p>

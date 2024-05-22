@@ -2,7 +2,7 @@ import Image from './commons/Image'
 
 function Highlights() {
   return (
-    <section>
+    <section id='highlights'>
       <h1>Specials</h1>
       <button role='button'>Online Menu</button>
       <article>
