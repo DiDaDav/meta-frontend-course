@@ -14,7 +14,7 @@ function Nav(props: NavProps) {
     )
   })
   return (
-    <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+    <nav className='col navbar navbar-expand-lg bg-body-tertiary'>
       {props.ordered ? (
         <ol className='navbar-nav me-auto mb-2 mb-lg-0'>{itemList}</ol>
       ) : (

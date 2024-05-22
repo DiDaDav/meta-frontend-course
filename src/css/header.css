@@ -1,4 +1,4 @@
-header {
+/*header {
     display: flex;
     flex-direction: row;
     flex-grow: initial;
@@ -26,4 +26,4 @@ header figure {
 header img {
     max-width: 100%;
     height: auto;
-}
+}*/

@@ -1,6 +1,7 @@
 import Nav from './commons/Nav'
 import Image from './commons/Image'
 import logoUrl from '../assets/logo_title.png'
+import mobileLogoUrl from '../assets/logo_complete_color.png'
 
 const menuList = [
   {
@@ -37,8 +38,8 @@ const menuList = [
 
 function Header() {
   return (
-    <header>
-      <Image src={logoUrl} alt='Little Lemon logo' />
+    <header className='row'>
+      <Image src={logoUrl} mobileSrc={mobileLogoUrl} alt='Little Lemon logo' />
       <Nav list={menuList} />
     </header>
   )

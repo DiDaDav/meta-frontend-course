@@ -1,8 +1,18 @@
-function Image(imageProps: { src: string; alt: string; caption?: string }) {
-  const { src, alt, caption } = imageProps
+type ImageProps = {
+  src: string
+  mobileSrc?: string
+  alt: string
+  caption?: string
+}
+
+function Image(imageProps: ImageProps) {
+  const { src, mobileSrc, alt, caption } = imageProps
   return (
-    <figure>
-      <img src={src} alt={alt} />
+    <figure className='col'>
+      <picture>
+        <source media='(max-width:768px)' srcSet={mobileSrc ?? src} />
+        <img className='img-fluid' src={src} alt={alt} />
+      </picture>
       <figcaption>{caption ?? ''}</figcaption>
     </figure>
   )
