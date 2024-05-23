@@ -21,7 +21,7 @@ const menuList = [
   },
   {
     id: 'Reservations',
-    link: '#Reservations',
+    link: '/book',
     desc: 'Reservations',
   },
   {

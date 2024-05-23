@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 type NavProps = {
   ordered?: boolean
   list: { id?: string; link: string; desc: string }[]
@@ -7,9 +9,9 @@ function Nav(props: NavProps) {
   const itemList = props.list.map((item) => {
     return (
       <li key={item.id ?? item.link} className='nav-item'>
-        <a href={item.link} className='nav-link'>
+        <Link to={item.link} className='nav-link'>
           {item.desc}
-        </a>
+        </Link>
       </li>
     )
   })
