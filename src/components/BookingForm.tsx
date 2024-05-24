@@ -2,7 +2,14 @@ import { useForm } from 'react-hook-form'
 import { submitApi } from '../utils/fakeApi'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { Button, FormLabel, Input, Select, VStack } from '@chakra-ui/react'
+import {
+  Button,
+  FormLabel,
+  Input,
+  Select,
+  Spacer,
+  VStack,
+} from '@chakra-ui/react'
 
 type FormValues = {
   date: Date
@@ -24,11 +31,7 @@ const getCurrentDate = () => {
 }
 
 function BookingForm(props: BookingProps) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>()
+  const { register, handleSubmit } = useForm<FormValues>()
   const navigate = useNavigate()
   const [submitted, setSubmitted] = useState(false)
 
@@ -40,7 +43,7 @@ function BookingForm(props: BookingProps) {
 
   const onSubmit = handleSubmit((data) => setSubmitted(submitApi(data)))
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className='col-8 col-sm-6 col-md-4'>
       <VStack>
         <FormLabel htmlFor='res-date'>Choose date</FormLabel>
         <Input
@@ -53,6 +56,7 @@ function BookingForm(props: BookingProps) {
             },
           })}
         />
+        <Spacer />
         <FormLabel htmlFor='res-time'>Choose time</FormLabel>
         <Select id='res-time' {...register('time', { required: true })}>
           {props.timeSlots &&
@@ -62,6 +66,7 @@ function BookingForm(props: BookingProps) {
               </option>
             ))}
         </Select>
+        <Spacer />
         <FormLabel htmlFor='guests'>Number of guests</FormLabel>
         <Input
           type='number'
@@ -69,15 +74,20 @@ function BookingForm(props: BookingProps) {
           min='1'
           max='10'
           defaultValue='2'
+          width='auto'
           {...register('guests', { required: true })}
         />
+        <Spacer />
         <FormLabel htmlFor='occasion'>Occasion</FormLabel>
         <Select id='occasion' {...register('occasion', { required: true })}>
           <option>None</option>
           <option>Birthday</option>
           <option>Anniversary</option>
         </Select>
-        <Button type='submit'>Make your reservation</Button>
+        <Spacer />
+        <Button id='bookingSubmit' type='submit'>
+          Make your reservation
+        </Button>
       </VStack>
     </form>
   )

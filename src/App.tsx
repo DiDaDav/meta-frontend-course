@@ -7,7 +7,7 @@ function App() {
   return (
     <div className='container gy-4'>
       <Header />
-      <main>
+      <main className='container'>
         <Outlet />
       </main>
       <Footer />

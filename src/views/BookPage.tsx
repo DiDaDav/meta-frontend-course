@@ -7,16 +7,15 @@ const initializeTimes = () => {
 }
 
 const updateTimes = (_state: string[], action: string) => {
-  console.log(action)
   return fetchApi(new Date(action))
 }
 
 const BookPage = () => {
   const [times, timeAction] = useReducer(updateTimes, initializeTimes())
   return (
-    <>
+    <div id='bookingForm' className='row justify-content-center'>
       <BookingForm timeSlots={times} setDate={timeAction} />
-    </>
+    </div>
   )
 }
 

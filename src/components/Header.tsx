@@ -29,7 +29,9 @@ function Header() {
           />
         </picture>
       </figure>
-      <nav className='col-9 nav nav-fill flex-column flex-sm-row align-items-center'>{itemList}</nav>
+      <nav className='col-9 nav nav-fill flex-column flex-sm-row align-items-center'>
+        {itemList}
+      </nav>
     </header>
   )
 }

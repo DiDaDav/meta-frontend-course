@@ -1,0 +1,14 @@
+#bookingForm {
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #495E57;
+    --chakra-space-2: 0px;
+
+    #bookingSubmit {
+        background-color: #F4CE14;
+    }
+}
