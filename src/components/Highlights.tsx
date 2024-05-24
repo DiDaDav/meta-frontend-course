@@ -1,4 +1,4 @@
-import Image from './commons/Image'
+import { Image } from '@chakra-ui/react'
 
 function Highlights() {
   return (

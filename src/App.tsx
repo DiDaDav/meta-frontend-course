@@ -5,9 +5,9 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <div className='container gy-4'>
+    <div className='container-fluid'>
       <Header />
-      <main className='container'>
+      <main className='container-fluid gx-0'>
         <Outlet />
       </main>
       <Footer />

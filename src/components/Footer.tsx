@@ -14,7 +14,7 @@ function Footer() {
 
   return (
     <footer className='row align-items-center'>
-      <figure className='col figure col-3'>
+      <figure className='figure col-3'>
         <Image
           id='footer-logo'
           className='figure-img img-fluid'
@@ -33,7 +33,11 @@ function Footer() {
           <h3>Contact</h3>
           <ul className='nav flex-column'>
             {['Address', 'Phone Number', 'Email'].map((it) => {
-              return <li className='nav-link'>{it}</li>
+              return (
+                <li key={it} className='nav-link'>
+                  {it}
+                </li>
+              )
             })}
           </ul>
         </div>
@@ -41,7 +45,11 @@ function Footer() {
           <h3>Social Media Links</h3>
           <ul className='nav flex-column'>
             {['Address', 'Phone Number', 'Email'].map((it) => {
-              return <li className='nav-link'>{it}</li>
+              return (
+                <li key={it} className='nav-link'>
+                  {it}
+                </li>
+              )
             })}
           </ul>
         </div>
