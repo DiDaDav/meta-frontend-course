@@ -1,29 +1,12 @@
-/*header {
-    display: flex;
-    flex-direction: row;
-    flex-grow: initial;
-    flex-shrink: initial;
-    flex-basis: auto;
+header {
+    figure {
+        height: 100%;
+        margin-bottom: 0;
+    }
+    .figure-img {
+        margin-bottom: 0;
+    }
+    .nav {
+        --bs-link-color: black;
+    }
 }
-
-header nav {
-    width: 75%;
-    --bs-tertiary-bg-rgb: antiquewhite;
-}
-
-header ul {
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-header figure {
-    margin-left: 0%;
-    width: 25%;
-    height: auto;
-}
-
-header img {
-    max-width: 100%;
-    height: auto;
-}*/
