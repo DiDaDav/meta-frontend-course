@@ -1,41 +1,8 @@
-import Nav from './commons/Nav'
 import logoUrl from '../assets/logo_title.png'
 import mobileLogoUrl from '../assets/logo_complete_color.png'
-import { HStack, Image } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
-
-const menuList = [
-  {
-    id: 'Home',
-    link: '/',
-    desc: 'Home',
-  },
-  {
-    id: 'About',
-    link: '#About',
-    desc: 'About',
-  },
-  {
-    id: 'Menu',
-    link: '#Menu',
-    desc: 'Menu',
-  },
-  {
-    id: 'Reservations',
-    link: '/book',
-    desc: 'Reservations',
-  },
-  {
-    id: 'Order',
-    link: '#Order',
-    desc: 'Order online',
-  },
-  {
-    id: 'Login',
-    link: '#Login',
-    desc: 'Login',
-  },
-]
+import { menuList } from '../utils/router'
 
 function Header() {
   const itemList = menuList.map((item) => {
