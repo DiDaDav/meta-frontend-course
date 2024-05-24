@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { submitApi } from '../utils/fakeApi'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { Button, FormLabel, Input, Select, VStack } from '@chakra-ui/react'
 
 type FormValues = {
   date: Date
@@ -35,47 +36,49 @@ function BookingForm(props: BookingProps) {
     if (submitted) {
       navigate('confirmation')
     }
-  }, [submitted])
+  }, [navigate, submitted])
 
   const onSubmit = handleSubmit((data) => setSubmitted(submitApi(data)))
   return (
     <form onSubmit={onSubmit}>
-      <label htmlFor='res-date'>Choose date</label>
-      <input
-        type='date'
-        defaultValue={getCurrentDate()}
-        {...register('date', {
-          required: true,
-          onChange: (e) => {
-            props.setDate(e.target.value)
-          },
-        })}
-      />
-      <label htmlFor='res-time'>Choose time</label>
-      <select id='res-time' {...register('time', { required: true })}>
-        {props.timeSlots &&
-          props.timeSlots.map((time) => (
-            <option key={time} value={time}>
-              {time}
-            </option>
-          ))}
-      </select>
-      <label htmlFor='guests'>Number of guests</label>
-      <input
-        type='number'
-        placeholder='1'
-        min='1'
-        max='10'
-        defaultValue='1'
-        {...register('guests', { required: true })}
-      />
-      <label htmlFor='occasion'>Occasion</label>
-      <select id='occasion' {...register('occasion', { required: true })}>
-        <option>None</option>
-        <option>Birthday</option>
-        <option>Anniversary</option>
-      </select>
-      <input type='submit' value='Make Your reservation' />
+      <VStack>
+        <FormLabel htmlFor='res-date'>Choose date</FormLabel>
+        <Input
+          type='date'
+          defaultValue={getCurrentDate()}
+          {...register('date', {
+            required: true,
+            onChange: (e) => {
+              props.setDate(e.target.value)
+            },
+          })}
+        />
+        <FormLabel htmlFor='res-time'>Choose time</FormLabel>
+        <Select id='res-time' {...register('time', { required: true })}>
+          {props.timeSlots &&
+            props.timeSlots.map((time) => (
+              <option key={time} value={time}>
+                {time}
+              </option>
+            ))}
+        </Select>
+        <FormLabel htmlFor='guests'>Number of guests</FormLabel>
+        <Input
+          type='number'
+          placeholder='1'
+          min='1'
+          max='10'
+          defaultValue='2'
+          {...register('guests', { required: true })}
+        />
+        <FormLabel htmlFor='occasion'>Occasion</FormLabel>
+        <Select id='occasion' {...register('occasion', { required: true })}>
+          <option>None</option>
+          <option>Birthday</option>
+          <option>Anniversary</option>
+        </Select>
+        <Button type='submit'>Make your reservation</Button>
+      </VStack>
     </form>
   )
 }

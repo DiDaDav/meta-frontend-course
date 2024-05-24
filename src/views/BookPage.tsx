@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react'
+import { useReducer } from 'react'
 import BookingForm from '../components/BookingForm'
 import { fetchApi } from '../utils/fakeApi'
 
@@ -13,10 +13,8 @@ const updateTimes = (_state: string[], action: string) => {
 
 const BookPage = () => {
   const [times, timeAction] = useReducer(updateTimes, initializeTimes())
-  const [selectedDate] = useState()
   return (
     <>
-      <h1>Table for the {selectedDate}</h1>
       <BookingForm timeSlots={times} setDate={timeAction} />
     </>
   )
