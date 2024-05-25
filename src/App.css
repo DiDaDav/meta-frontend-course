@@ -19,11 +19,32 @@
     color: black;
 }
 
-p {
+.section-title, .card-title, p {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   color: black;
+}
+
+.section-title {
+    font-size: 4vmin;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-size: 2.5vmin;
+    font-weight: bold;
+}
+
+.card-price {
+    color: #F4CE14;
+    font-weight: bold;
+}
+
+p {
+    font-size: 2vmin;
+    line-height: 1.5;
 }
 
 #bookingForm {
@@ -49,7 +70,24 @@ p {
     figure {
         margin-bottom: 0;
     }
+
     button {
         background-color: #F4CE14;
+        color: black;
+    }
+}
+
+#highlights {
+    --card-padding: 0;
+
+    button {
+        background-color: #F4CE14;
+        color: black;
+    }
+
+    .chakra-card {
+        border-radius: 0;
+        border-top-left-radius: 16pt;
+        border-top-right-radius: 16pt;
     }
 }
