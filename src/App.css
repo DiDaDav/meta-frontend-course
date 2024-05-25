@@ -1,3 +1,31 @@
+.title {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 10vmin;
+    line-height: 6vmin;
+    margin-bottom: 0;
+    color: black;
+}
+
+.subtitle {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 7vmin;
+    margin-bottom: 0;
+    color: black;
+}
+
+p {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: black;
+}
+
 #bookingForm {
     margin-top: 2.5%;
     margin-bottom: 2.5%;
@@ -15,4 +43,13 @@
 
 #heroSection {
     background-color: #495E57;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    figure {
+        margin-bottom: 0;
+    }
+    button {
+        background-color: #F4CE14;
+    }
 }

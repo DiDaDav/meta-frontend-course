@@ -4,11 +4,17 @@ import pizzaUrl from '../assets/pizza.jpg'
 
 function HeroSection() {
   return (
-    <section id='heroSection' className='row'>
-      <div className='col-6'>
-        <h1>Little Lemon</h1>
-        <h2>Chicago</h2>
-        <p>Laurem ipsum</p>
+    <section
+      id='heroSection'
+      className='row align-items-center justify-content-evenly'
+    >
+      <div className='col-4 col-sm-4'>
+        <h1 className='title'>Little Lemon</h1>
+        <h2 className='subtitle'>Chicago</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
         <Button role='button'>
           <Link to='/book'>Reserve a table</Link>
         </Button>
