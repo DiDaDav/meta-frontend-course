@@ -29,7 +29,7 @@ const Card = (cardProps: CardProps) => {
         <CardBody>
           <div className='row'>
             <h1 className='card-title col'>{cardProps.title}</h1>
-            <p className='card-price col-4'>${cardProps.price}</p>
+            <p className='card-price col-4 text-nowrap'>${cardProps.price}</p>
           </div>
           <p>
             {cardProps.description ??

@@ -34,6 +34,7 @@ function Highlights() {
       <div className='row align-items-start justify-content-center'>
         {specials.map((s) => (
           <Card
+            key={s.title}
             imageUrl={s.imageUrl}
             title={s.title}
             price={s.price}
