@@ -16,7 +16,9 @@ function HeroSection() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
         <Button role='button'>
-          <Link to='/book'>Reserve a table</Link>
+          <Link to='/book' role='link'>
+            Reserve a table
+          </Link>
         </Button>
       </div>
       <figure className='figure col-3'>

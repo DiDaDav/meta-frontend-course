@@ -6,7 +6,12 @@ import { Image } from '@chakra-ui/react'
 function Footer() {
   const itemList = menuList.map((item) => {
     return (
-      <Link key={item.id ?? item.link} to={item.link} className='nav-link'>
+      <Link
+        key={item.id ?? item.link}
+        to={item.link}
+        className='nav-link'
+        role='link'
+      >
         {item.desc}
       </Link>
     )

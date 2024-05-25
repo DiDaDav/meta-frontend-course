@@ -7,7 +7,12 @@ import { menuList } from '../utils/router'
 function Header() {
   const itemList = menuList.map((item) => {
     return (
-      <Link key={item.id ?? item.link} to={item.link} className='nav-link'>
+      <Link
+        key={item.id ?? item.link}
+        to={item.link}
+        className='nav-link'
+        role='link'
+      >
         {item.desc}
       </Link>
     )
